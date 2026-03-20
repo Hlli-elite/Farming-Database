@@ -1,34 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Website</title>
   <style>
-    body {
-      background-image: url('https://preview.redd.it/wr-r140-cash-v0-iq3a7r5hsoig1.png?width=1080&crop=smart&auto=webp&s=4362778c9e3f36d8132089721b3804555ba213d1');
-      background-size: cover;
-      background-position: center;
-      margin: 0;
-      padding: 0;
+    :root {
+      --bg-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600');
+      --overlay-opacity: 0.55;
+      --text-color: #ffffff;
     }
 
-    .box {
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      font-family: Georgia, serif;
+      color: var(--text-color);
+      background: #111;
+    }
+
+    .bg {
+      min-height: 100vh;
+      background-image: var(--bg-image);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, var(--overlay-opacity));
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      width: 90%;
+      margin: 0 auto;
+      padding: 80px 0;
       text-align: center;
-      padding: 100px 20px;
-      color: white;
     }
 
     p {
-      font-size: 20px;
+      font-size: 1.1rem;
+      line-height: 1.9;
+      margin-bottom: 24px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
     }
   </style>
 </head>
 <body>
 
-  <div class="box">
-    <p>Welcome to the farming database!</p>
-    <p>This is a community run project to help people farm and see what others have accomplished!</p>
-    <p>Feel free to look around. Enjoy!</p>
-  </div>
+  <section class="bg">
+    <div class="content">
+
+      <p>Welcome to my website. This is your first paragraph — replace this with whatever you'd like to say.</p>
+
+      <p>This is a second paragraph. Great for a tagline, a short bio, or a mission statement.</p>
+
+      <p>Add as many paragraphs as you need. Customize the text, background image, and colors at the top of the style block.</p>
+
+    </div>
+  </section>
 
 </body>
 </html>
