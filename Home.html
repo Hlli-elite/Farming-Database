@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Website</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     /* ============================================
        CUSTOMIZE YOUR WEBSITE HERE
@@ -12,26 +11,16 @@
 
     :root {
       /* --- BACKGROUND IMAGE ---
-         Replace the URL below with your own image URL
+         Replace with your own image URL
          or a local file path like: url('your-photo.jpg') */
       --bg-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600');
 
       /* --- OVERLAY DARKNESS ---
-         0.0 = no overlay (full bright image)
-         0.5 = half dark
-         0.85 = very dark (good for light text) */
+         0.0 = no overlay, 0.5 = half dark, 0.85 = very dark */
       --overlay-opacity: 0.55;
 
-      /* --- TEXT COLOR ---
-         Change to any color you like */
+      /* --- TEXT COLOR --- */
       --text-color: #ffffff;
-
-      /* --- ACCENT COLOR ---
-         Used for the decorative line and highlights */
-      --accent-color: #f0c040;
-
-      /* --- PARAGRAPH TEXT ---
-         Edit the content inside the <p> tags below in the HTML */
     }
 
     /* ============================================
@@ -42,7 +31,7 @@
 
     body {
       min-height: 100vh;
-      font-family: 'DM Sans', sans-serif;
+      font-family: Georgia, serif;
       color: var(--text-color);
       background: #111;
     }
@@ -52,7 +41,6 @@
       background-image: var(--bg-image);
       background-size: cover;
       background-position: center;
-      background-attachment: fixed;
       position: relative;
       display: flex;
       align-items: center;
@@ -69,48 +57,21 @@
     .content {
       position: relative;
       z-index: 1;
-      max-width: 720px;
+      max-width: 700px;
       width: 90%;
       margin: 0 auto;
       padding: 80px 0;
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 28px;
-    }
-
-    .accent-line {
-      width: 56px;
-      height: 4px;
-      background: var(--accent-color);
-      border-radius: 2px;
     }
 
     p {
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      font-weight: 300;
-      line-height: 1.85;
-      letter-spacing: 0.01em;
-      opacity: 0.92;
+      font-size: 1.1rem;
+      line-height: 1.9;
+      margin-bottom: 24px;
     }
 
-    p strong {
-      font-weight: 500;
-      color: var(--accent-color);
-    }
-
-    .fade-in {
-      animation: fadeUp 0.9s ease both;
-    }
-    .fade-in:nth-child(2) { animation-delay: 0.15s; }
-    .fade-in:nth-child(3) { animation-delay: 0.3s; }
-    .fade-in:nth-child(4) { animation-delay: 0.45s; }
-    .fade-in:nth-child(5) { animation-delay: 0.6s; }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
+    p:last-child {
+      margin-bottom: 0;
     }
   </style>
 </head>
@@ -119,37 +80,13 @@
   <section class="bg">
     <div class="content">
 
-      <!-- DECORATIVE LINE (you can remove this if you don't want it) -->
-      <div class="accent-line fade-in"></div>
+      <!-- Edit your paragraphs below. Add or remove <p> blocks as needed. -->
 
-      <!-- ============================================
-           PARAGRAPH TEXT — Edit freely below!
-           Add or remove <p> blocks as you need.
-           Use <strong>word</strong> to highlight words.
-           ============================================ -->
+      <p>Welcome to my website. This is your first paragraph — replace this with whatever you'd like to say.</p>
 
-      <p class="fade-in">
-        Welcome to my website. This is your first paragraph — replace this with
-        whatever you'd like to say. You can write anything here.
-      </p>
+      <p>This is a second paragraph. Great for a tagline, a short bio, or a mission statement.</p>
 
-      <p class="fade-in">
-        This is a <strong>second paragraph</strong>. Great for a tagline,
-        a short bio, or a mission statement. Keep it brief and bold.
-      </p>
-
-      <p class="fade-in">
-        Add as many paragraphs as you need. Each one fades in smoothly
-        when the page loads. Customize the text, colors, and background
-        image at the top of the &lt;style&gt; block.
-      </p>
-
-      <!-- ============================================
-           END OF TEXT ZONE
-           ============================================ -->
-
-      <!-- ANOTHER ACCENT LINE AT BOTTOM (optional) -->
-      <div class="accent-line fade-in"></div>
+      <p>Add as many paragraphs as you need. Customize the text, background image, and colors at the top of the style block.</p>
 
     </div>
   </section>
